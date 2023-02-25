@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/atlasgpt/static/js/main.37ad5f4d.js",
-    "static/media/shipitlogo.png": "/atlasgpt/static/media/shipitlogo.84c3e9fe6659b0547107.png",
-    "static/media/atlasgpt.png": "/atlasgpt/static/media/atlasgpt.ced42aaa4c789ab14c39.png",
-    "static/media/light.png": "/atlasgpt/static/media/light.27cc7f2e3fe4ddf56291.png",
-    "static/media/atlas-white.png": "/atlasgpt/static/media/atlas-white.23cd2f16dbe945e3631e.png",
-    "static/media/send.png": "/atlasgpt/static/media/send.46228e3b71052aa77bad.png",
-    "index.html": "/atlasgpt/index.html",
-    "main.37ad5f4d.js.map": "/atlasgpt/static/js/main.37ad5f4d.js.map"
+    "main.js": "/static/js/main.3591224e.js",
+    "static/media/shipitlogo.png": "/static/media/shipitlogo.84c3e9fe6659b0547107.png",
+    "static/media/atlasgpt.png": "/static/media/atlasgpt.ced42aaa4c789ab14c39.png",
+    "static/media/light.png": "/static/media/light.27cc7f2e3fe4ddf56291.png",
+    "static/media/atlas-white.png": "/static/media/atlas-white.23cd2f16dbe945e3631e.png",
+    "static/media/send.png": "/static/media/send.46228e3b71052aa77bad.png",
+    "index.html": "/index.html",
+    "main.3591224e.js.map": "/static/js/main.3591224e.js.map"
   },
   "entrypoints": [
-    "static/js/main.37ad5f4d.js"
+    "static/js/main.3591224e.js"
   ]
 }
