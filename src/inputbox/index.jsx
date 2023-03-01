@@ -1,4 +1,5 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
+import axios from "axios";
 import {
   Container,
   TextBox,
@@ -14,6 +15,7 @@ import {
   QueryBox,
   FinalQueryBox,
   Avatar,
+  SpinnerDiv,
   GlowButton
 } from './styled'
 import Atlas from '../assets/logos/atlasgpt.png'
@@ -23,9 +25,33 @@ import User from '../assets/logos/user.png'
 
 const InputBox = () => {
   const [inputValue, setInputValue] = useState("");
+  const [responseValue, setResponseValue] = useState("");
   const [showNextQuestion, setShowNextQuestion] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+      fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const fetchData = async () => {
+  setIsLoading(true);
+  await axios.post("https://raven.us-east-1.staging.atl-paas.net/rest/api/1/document/search", {
+    "query": inputValue,
+    "modelId": "multi_qa_miniLM_l6_cos_v1"
+  })
+  .then((res) => {
+      setResponseValue(res.data.results[0].text)
+  })
+  .catch((err) => {
+      console.log(err);
+  })
+  .finally(() => setIsLoading(false))
+  }
 
   const handleButtonClick = () => {
+    
+    fetchData();
     setShowNextQuestion(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -62,11 +88,13 @@ const InputBox = () => {
 
       {showNextQuestion && (
         <AnimatedBox>
-          <FinalQueryBox><Avatar src={User}/>&nbsp;&nbsp;&nbsp;{inputValue}</FinalQueryBox>
-          <NoBorderTextBox rows={5}><Avatar src={Atlas}/>&nbsp;&nbsp;&nbsp; Meet our new team member AtlasAssist, specially trained to answer all your common questions. Need an IT help? Want to know how to create a resource in Micros? AtlasAssist has got you covered! Say goodbye to waiting for the reply to your "Hey, quick call?" </NoBorderTextBox>
+          {isLoading && <SpinnerDiv />}
+          {!isLoading && (<><FinalQueryBox><Avatar src={User}/>&nbsp;&nbsp;&nbsp;{inputValue}</FinalQueryBox>
+          <NoBorderTextBox rows={5}><Avatar src={Atlas}/>&nbsp;&nbsp;&nbsp; {responseValue}</NoBorderTextBox>
           <GlowButton onClick={handleNextButtonClick}>
             Go again
-          </GlowButton>
+          </GlowButton></>
+          )}
         </AnimatedBox>
       )}
     </Container>
