@@ -73,7 +73,7 @@ const InputBox = () => {
         <Fragment>
       <ProfileCard>
                     <ProfileImg src = {Atlas} alt = 'Profile' />
-                    <Description> Meet our new team member AtlasAssist, specially trained to answer all your common questions. Need an IT help? Want to know how to create a resource in Micros? AtlasAssist has got you covered! Say goodbye to waiting for the reply to your "Hey, quick call?"</Description>
+                    <Description> Meet our new team member Alfred, specially trained to answer all your common questions. Need an IT help? Want to know how to create a resource in Micros? AtlasAssist has got you covered! Say goodbye to waiting for the reply to your "Hey, quick call?"</Description>
       </ProfileCard>
       <QueryBox>
       <TextBox

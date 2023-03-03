@@ -285,8 +285,8 @@ export const SpinnerDiv = styled.div`
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid ${ props => props.theme.mode === 'dark' ? 'white': 'black' };
-    border-color: ${ props => props.theme.mode === 'dark' ? 'white': 'black' } ${ props => props.theme.mode === 'dark' ? 'white': 'black' } transparent transparent;
+    border: 6px solid white;
+    border-color: white white transparent transparent;
     animation: dual-ring 0.7s linear infinite;
     @keyframes dual-ring {
         0% {

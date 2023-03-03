@@ -29,7 +29,7 @@ function Main () {
                         <ProfileImg src = {Atlas} alt = 'Profile' />
                     </ProfilePicture>
                     </Link>
-                    <Name>AtlasAssist</Name>
+                    <Name>Alfred</Name>
                     <Description> Instant, intelligent chat assistance.</Description>
                 </ProfileCard>
                 <ColorToggle src = {ShipIt} alt = "shipit" />
