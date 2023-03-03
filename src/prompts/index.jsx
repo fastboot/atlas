@@ -6,23 +6,23 @@ function Prompt () {
     return (
         <PromptWrapper>
             <PromptBlock><Avatar src = {Light}/><Description>
-                Try Charlie: The Scriber
+                How do we delete any micros resources?
             </Description>
 
             </PromptBlock>
             <PromptBlock >
             <Avatar src = {Light}/><Description>
-                Find micros resource
+                What is the process to raise a request for new laptop?
             </Description>
             </PromptBlock>
             <PromptBlock >
             <Avatar src = {Light}/><Description>
-                Find team members and owner of component
+                 What is the main reason for the network segmentation?
             </Description>
             </PromptBlock>
             <PromptBlock>
             <Avatar src = {Light}/><Description>
-                Find out which Hogwarts house you belong to
+                When should we go for Kubernetes instead of EC2 instances?
             </Description>
             </PromptBlock>
         </PromptWrapper>
